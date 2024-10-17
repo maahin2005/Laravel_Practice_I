@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
+
 return [
 
     /*
@@ -49,6 +50,7 @@ return [
         /*
          * Application Service Providers...
          */
+        Barryvdh\Snappy\ServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         // App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,

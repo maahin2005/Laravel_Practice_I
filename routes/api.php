@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SnappyPDFController;
 
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:api');
@@ -32,7 +33,8 @@ Route::post('/register', [AuthController::class, 'register']);
 // Route::get('me', [AuthController::class, 'me'])->middleware('auth:api');
 
 
-Route::apiResource('posts', PostController::class);
+// Route::apiResource('posts', PostController::class);
+// Route::get('/get-snappy-pdf', PostController::class, "getPDF");
 
 
 // Route::apiResource('posts', PostController::class);
@@ -43,3 +45,4 @@ Route::apiResource('posts', PostController::class);
 // Route::apiResource('posts', UserPostController::class);
 // Route::apiResource('comments', UserCommentController::class);
 
+Route::get("/get-snappy-pdf", SnappyPDFController::class, "getPDF");
